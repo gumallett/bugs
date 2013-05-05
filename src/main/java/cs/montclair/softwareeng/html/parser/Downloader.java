@@ -1,75 +1,83 @@
 package cs.montclair.softwareeng.html.parser;
 
+import org.apache.commons.io.FileUtils;
+import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import java.io.*;
-import java.net.URL;
+import java.io.File;
+import java.io.IOException;
 
 public class Downloader {
 
-   private static final String DIR = "C:\\svn\\parser\\eclipse_bugs";
-   private static final String SEARCH_URL = "https://bugs.eclipse.org/bugs/buglist.cgi?chfield=[Bug%20creation]&chfieldfrom=2000-01-01&chfieldto=2011-02-01&classification=Eclipse&component=IDE&product=Platform&query_format=advanced&order=changeddate%2Cbug_status%2Cpriority%2Cassigned_to%2Cbug_id&limit=0";
+   private static final String BUGZILLA_URL = "https://netbeans.org/bugzilla";
+   private static final String DIR = "C:\\svn\\parser\\netbeans_bugs";
 
-   public static void main(String[] args) throws Exception {
+   private final File searchFile;
+   private final String bugzillaUrl;
+   private final String searchUrl;
+   private final String outputDir;
+
+   public Downloader(String bugzillaUrl, String searchUri, String outputDir) {
+      this.outputDir = outputDir;
+      this.searchFile = new File(outputDir, "search.html");
+      this.bugzillaUrl = bugzillaUrl;
+      this.searchUrl = bugzillaUrl + "/" + searchUri;
+   }
+
+   public Connection.Response downloadSearchPage() throws IOException {
+      System.out.println("Getting search file...");
+      Connection.Response doc = getUrlWithJSoup(searchUrl);
+
+      FileUtils.writeByteArrayToFile(searchFile, doc.bodyAsBytes());
+      return doc;
+   }
+
+   public void downloadAllBugs() throws IOException {
       Document page = getSearchPage();
-
-      Elements links = page.select(".bz_id_column a");
+      Elements links = page.select(getBugLinkSelector());
 
       for(Element element : links) {
          String linkUrl = element.attr("href");
-         Document bugPage = getUrlWithJSoup("https://bugs.eclipse.org/bugs/" + linkUrl);
-         writeToFile(bugPage.toString(), new File(DIR, element.text() + ".html"));
+         Connection.Response bugPage = getUrlWithJSoup(bugzillaUrl + "/" + linkUrl);
+         FileUtils.writeByteArrayToFile(new File(outputDir, element.text() + ".html"), bugPage.bodyAsBytes());
       }
 
       System.out.println("Num links: " + links.size());
    }
 
-   private static Document getSearchPage() throws IOException {
-      File searchFile = new File(DIR, "\\search.html");
+   /**
+    * The CSS selector to use to parse the bug <a></a> link tags.
+    */
+   public String getBugLinkSelector() {
+      return ".bz_buglist .bz_bugitem a";
+   }
 
+   private Document getSearchPage() throws IOException {
       if(searchFile.exists()) {
+         System.out.println("Parsing existing search file...");
          return Jsoup.parse(searchFile, "UTF-8");
       }
       else {
-         Document doc = getUrlWithJSoup(SEARCH_URL);
-
-         writeToFile(doc.toString(), searchFile);
-         return doc;
+         Connection.Response resp = downloadSearchPage();
+         System.out.println("Parsing search file...");
+         return Jsoup.parse(searchFile, resp.charset());
       }
    }
 
-   private static void writeToFile(String string, File file) {
-      FileOutputStream fos = null;
-
-      try {
-         fos = new FileOutputStream(file);
-         PrintWriter writer = new PrintWriter(fos);
-         writer.println(string);
-         writer.flush();
-      }
-      catch(FileNotFoundException e) {
-         e.printStackTrace();
-      }
-      finally {
-         if(fos != null) {
-            try {
-               fos.close();
-            }
-            catch(IOException e) {
-               // swallowed
-            }
-         }
-      }
+   public static void main(String[] args) throws Exception {
+      String search = "buglist.cgi?order=Importance;chfieldto=2011-04-01;query_format=advanced;chfield=[Bug%20creation];chfieldfrom=2006-01-01;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=STARTED;bug_status=REOPENED;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED";
+      Downloader downloader = new Downloader(BUGZILLA_URL, search, DIR);
+      downloader.downloadAllBugs();
    }
 
-   private static Document getUrlWithJSoup(String url) throws IOException {
+   private static Connection.Response getUrlWithJSoup(String url) throws IOException {
       return Jsoup.connect(url).
               userAgent("Mozilla").
               data("name", "jsoup").
-              timeout(60000).
-              maxBodySize(0).get();
+              timeout(600000).
+              maxBodySize(0).execute();
    }
 }
