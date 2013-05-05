@@ -9,6 +9,9 @@ import org.jsoup.select.Elements;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 public class Downloader {
 
@@ -19,6 +22,7 @@ public class Downloader {
    private final String bugzillaUrl;
    private final String searchUrl;
    private final String outputDir;
+   private final ExecutorService pool = Executors.newFixedThreadPool(8);
 
    public Downloader(String bugzillaUrl, String searchUri, String outputDir) {
       this.outputDir = outputDir;
@@ -40,9 +44,18 @@ public class Downloader {
       Elements links = page.select(getBugLinkSelector());
 
       for(Element element : links) {
-         String linkUrl = element.attr("href");
-         Connection.Response bugPage = getUrlWithJSoup(bugzillaUrl + "/" + linkUrl);
-         FileUtils.writeByteArrayToFile(new File(outputDir, element.text() + ".html"), bugPage.bodyAsBytes());
+         pool.submit(new BugDownloader(element));
+      }
+
+      pool.shutdown();
+
+      try {
+         while(!pool.isTerminated()) {
+            Thread.sleep(500);
+         }
+      }
+      catch(InterruptedException e) {
+         e.printStackTrace();
       }
 
       System.out.println("Num links: " + links.size());
@@ -52,10 +65,10 @@ public class Downloader {
     * The CSS selector to use to parse the bug <a></a> link tags.
     */
    public String getBugLinkSelector() {
-      return ".bz_buglist .bz_bugitem a";
+      return ".bz_buglist .bz_bugitem .bz_id_column a";
    }
 
-   private Document getSearchPage() throws IOException {
+   public Document getSearchPage() throws IOException {
       if(searchFile.exists()) {
          System.out.println("Parsing existing search file...");
          return Jsoup.parse(searchFile, "UTF-8");
@@ -79,5 +92,34 @@ public class Downloader {
               data("name", "jsoup").
               timeout(600000).
               maxBodySize(0).execute();
+   }
+
+   private class BugDownloader implements Runnable {
+
+      private final Element element;
+
+      public BugDownloader(Element element) {
+         this.element = element;
+      }
+
+      @Override
+      public void run() {
+         try {
+            String linkUri = element.attr("href");
+            String bugLink = bugzillaUrl + "/" + linkUri;
+            String bugFilename = element.text() + ".html";
+
+            System.out.println("Downloading bug: " + bugLink);
+
+            Connection.Response bugPage = getUrlWithJSoup(bugLink);
+
+            System.out.println("Writing bug file to: " + bugFilename);
+
+            FileUtils.writeByteArrayToFile(new File(outputDir, bugFilename), bugPage.bodyAsBytes());
+         }
+         catch(Exception e) {
+            e.printStackTrace();
+         }
+      }
    }
 }
