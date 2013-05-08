@@ -2,6 +2,8 @@ package cs.montclair.softwareeng.html.parser;
 
 import cs.montclair.softwareeng.model.VCSCommit;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 public class ChromiumBugzillaParser extends HtmlBugParser {
 
@@ -12,9 +14,15 @@ public class ChromiumBugzillaParser extends HtmlBugParser {
 
    @Override
    protected VCSCommit parseCommit(Document doc) {
-      String revision = doc.select("a[href*=chromium/source").get(0).text();
+      Elements elems = doc.select("a[href*=chromium/source");
 
-      return new VCSCommit(revision);
+      if(elems.size() > 0) {
+         String revision = elems.get(0).text();
+         return new VCSCommit(revision);
+      }
+
+
+      return null;
    }
 
    @Override

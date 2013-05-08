@@ -5,17 +5,11 @@ public class Bug {
    private int id;
    private String name;
    private String description;
+   private String status;
    private VCSCommit commit;
 
    public Bug() {
 
-   }
-
-   public Bug(int id, String name, String description, VCSCommit commit) {
-      this.id = id;
-      this.name = name;
-      this.description = description;
-      this.commit = commit;
    }
 
    public int getId() {
@@ -40,6 +34,14 @@ public class Bug {
 
    public void setDescription(String description) {
       this.description = description;
+   }
+
+   public String getStatus() {
+      return status;
+   }
+
+   public void setStatus(String status) {
+      this.status = status;
    }
 
    public VCSCommit getCommit() {

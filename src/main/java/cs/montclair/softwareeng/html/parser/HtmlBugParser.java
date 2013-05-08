@@ -17,6 +17,7 @@ public abstract class HtmlBugParser implements IHtmlBugParser {
       Bug bug = new Bug();
       bug.setDescription(parseDescription(doc));
       bug.setCommit(parseCommit(doc));
+      bug.setStatus(parseStatus(doc));
 
       return bug;
    }
