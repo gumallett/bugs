@@ -3,7 +3,14 @@ package cs.montclair.softwareeng.html.parser;
 import cs.montclair.softwareeng.model.VCSCommit;
 import org.jsoup.nodes.Document;
 
+import java.sql.Timestamp;
+
 public class EclipseBugzillaParser extends HtmlBugParser {
+
+   @Override
+   protected String parseSummary(Document doc) {
+      return null;  //To change body of implemented methods use File | Settings | File Templates.
+   }
 
    @Override
    protected String parsePriority(Document doc) {
@@ -12,6 +19,11 @@ public class EclipseBugzillaParser extends HtmlBugParser {
 
    @Override
    protected String parseIssueType(Document doc) {
+      return null;  //To change body of implemented methods use File | Settings | File Templates.
+   }
+
+   @Override
+   protected Timestamp parseCreatedDate(Document doc) {
       return null;  //To change body of implemented methods use File | Settings | File Templates.
    }
 

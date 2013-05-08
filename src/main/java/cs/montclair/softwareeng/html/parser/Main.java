@@ -1,5 +1,6 @@
 package cs.montclair.softwareeng.html.parser;
 
+import cs.montclair.softwareeng.db.BugDAO;
 import cs.montclair.softwareeng.model.Bug;
 
 import java.io.File;
@@ -27,6 +28,9 @@ public class Main {
          try {
             Bug bug = parser.parse(path);
             System.out.println("Bug: " + bug);
+            System.out.println("Description: " + bug.getDescription());
+            BugDAO dao = new BugDAO();
+            dao.save(bug);
          }
          catch(IOException e) {
             e.printStackTrace();

@@ -27,5 +27,12 @@
             <artifactId>hibernate-core</artifactId>
             <version>4.2.1.Final</version>
         </dependency>
+        <!-- mvn install:install-file -Dfile="C:\Program Files\Java\jdbc\postgresql-9.2-1002.jdbc4.jar"
+            -DgroupId=org.postgresql -DartifactId=postgresql -Dversion=9.2-1002.jdbc4 -Dpackaging=jar -->
+        <dependency>
+            <groupId>postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>9.0-801.jdbc4</version>
+        </dependency>
     </dependencies>
 </project>
