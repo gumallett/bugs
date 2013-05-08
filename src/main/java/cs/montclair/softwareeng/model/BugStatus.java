@@ -5,5 +5,9 @@ public enum BugStatus {
    CONFIRMED,
    IN_PROGRESS,
    RESOLVED,
-   VERIFIED
+   VERIFIED,
+   CLOSED,
+   NEW,
+   STARTED,
+   REOPENED
 }

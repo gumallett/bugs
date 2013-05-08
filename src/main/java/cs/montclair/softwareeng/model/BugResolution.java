@@ -5,5 +5,6 @@ public enum BugResolution {
    INVALID,
    WONTFIX,
    DUPLICATE,
-   WORKSFORME
+   WORKSFORME,
+   INCOMPLETE
 }

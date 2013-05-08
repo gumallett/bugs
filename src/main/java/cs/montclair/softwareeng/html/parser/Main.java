@@ -36,6 +36,11 @@ public class Main {
             e.printStackTrace();
          }
       }
+      else {
+         List<Bug> bugs = parseAll(path, parser);
+         BugDAO dao = new BugDAO();
+         dao.saveAll(bugs);
+      }
    }
 
    private static IHtmlBugParser getParser(String type) {
@@ -51,6 +56,7 @@ public class Main {
 
    private static List<Bug> parseAll(File dir, IHtmlBugParser parser) {
       List<Bug> bugs = new ArrayList<Bug>();
+      int progress = 0;
 
       for(File file : dir.listFiles()) {
          if(file.getName().equals("search.html")) {
@@ -61,11 +67,17 @@ public class Main {
             Bug bug = parser.parse(file);
             bugs.add(bug);
 
+            if(progress % 100 == 0) {
+               System.out.println(progress + " bugs parsed.");
+            }
+
             //System.out.println("Bug parsed successfully: " + bug);
          }
          catch(IOException ioe) {
             ioe.printStackTrace();
          }
+
+         progress++;
       }
 
       System.out.println("# bugs found: " + bugs.size());

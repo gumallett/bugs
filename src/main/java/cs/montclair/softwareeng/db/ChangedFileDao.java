@@ -14,7 +14,7 @@ public class ChangedFileDao extends GenericDao<ChangedFile> {
       session.beginTransaction();
 
       ChangedFile changedFile = (ChangedFile)
-         session.createQuery("from ChangedFile as file where file.fileName=?").setString(0, filename).uniqueResult();
+         session.createQuery("from ChangedFile as file where file.fileName=:name").setString("name", filename).uniqueResult();
 
       session.getTransaction().commit();
       return changedFile;

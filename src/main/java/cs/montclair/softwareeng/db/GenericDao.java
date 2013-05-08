@@ -38,8 +38,16 @@ public abstract class GenericDao<E> {
       Session session = open();
       session.beginTransaction();
 
+      int i=0;
       for(E bug : entities) {
          session.saveOrUpdate(bug);
+         i++;
+
+         if(i % 100 == 0) {
+            session.flush();
+            session.clear();
+            System.out.println(i + " bugs saved.");
+         }
       }
 
       session.flush();

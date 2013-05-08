@@ -27,10 +27,12 @@
         <property name="cache.use_query_cache">false</property>
 
         <!-- Echo all executed SQL to stdout -->
-        <property name="show_sql">true</property>
+        <property name="show_sql">false</property>
 
-        <!-- Drop and re-create the database schema on startup -->
+        <!-- update the database schema on startup -->
         <property name="hbm2ddl.auto">update</property>
+
+        <property name="jdbc.batch_size">100</property>
 
         <mapping class="cs.montclair.softwareeng.model.Bug"/>
         <mapping class="cs.montclair.softwareeng.model.VCSCommit"/>

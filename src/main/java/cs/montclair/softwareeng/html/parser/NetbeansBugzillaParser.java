@@ -70,6 +70,12 @@ public class NetbeansBugzillaParser extends HtmlBugParser {
          priority = priority.substring(0, idx).trim();
       }
 
+      idx = priority.indexOf("with");
+
+      if(idx != -1) {
+         priority = priority.substring(0, idx).trim();
+      }
+
       //System.out.println("td: "+elem+" priority: "+priority);
       return priority;
    }
@@ -131,8 +137,10 @@ public class NetbeansBugzillaParser extends HtmlBugParser {
             String revision = matcher.group();
             commit.setRevision(revision);
 
+            Process hg = null;
+
             try {
-               Process hg = getMercurialLog(revision);
+               hg = getMercurialLog(revision);
                InputStream is = hg.getInputStream();
 
                Scanner scanner = new Scanner(is);
@@ -156,12 +164,17 @@ public class NetbeansBugzillaParser extends HtmlBugParser {
                   e.printStackTrace();
                }
 
-               System.out.println(commit);
+               //System.out.println(commit);
 
                hg.destroy();
             }
-            catch(IOException e) {
-               e.printStackTrace();
+            catch(Exception e) {
+               new Exception("Error getting revision log for rev #: "+revision).printStackTrace();
+            }
+            finally {
+               if(hg != null) {
+                  hg.destroy();
+               }
             }
 
             return commit;
