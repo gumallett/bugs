@@ -10,6 +10,16 @@ public class NetbeansBugzillaParser extends HtmlBugParser {
    }
 
    @Override
+   protected String parsePriority(Document doc) {
+      return null;
+   }
+
+   @Override
+   protected String parseIssueType(Document doc) {
+      return null;
+   }
+
+   @Override
    protected String parseDescription(Document doc) {
       return null;
    }
@@ -21,7 +31,8 @@ public class NetbeansBugzillaParser extends HtmlBugParser {
 
    @Override
    protected String parseStatus(Document doc) {
-      //System.out.println("doc: "+doc.toString());
       return doc.select("#bz_field_status").text();
    }
+
+
 }

@@ -1,6 +1,8 @@
 package cs.montclair.softwareeng.html.parser;
 
 import cs.montclair.softwareeng.model.Bug;
+import cs.montclair.softwareeng.model.BugResolution;
+import cs.montclair.softwareeng.model.BugStatus;
 import cs.montclair.softwareeng.model.VCSCommit;
 import org.jsoup.Jsoup;
 
@@ -17,10 +19,25 @@ public abstract class HtmlBugParser implements IHtmlBugParser {
       Bug bug = new Bug();
       bug.setDescription(parseDescription(doc));
       bug.setCommit(parseCommit(doc));
-      bug.setStatus(parseStatus(doc));
+
+      String status = parseStatus(doc);
+      String resolution = null;
+
+      if(status.indexOf(" ") != -1) {
+         String[] parts = status.split(" ");
+         status = parts[0];
+         resolution = parts[1];
+      }
+
+      bug.setStatus(BugStatus.valueOf(status));
+      bug.setResolution(resolution == null ? null : BugResolution.valueOf(resolution));
 
       return bug;
    }
+
+   protected abstract String parsePriority(Document doc);
+
+   protected abstract String parseIssueType(Document doc);
 
    protected abstract String parseDescription(Document doc);
 

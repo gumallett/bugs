@@ -1,8 +1,6 @@
 package cs.montclair.softwareeng.html.parser;
 
 import cs.montclair.softwareeng.model.Bug;
-import cs.montclair.softwareeng.model.Counter;
-import cs.montclair.softwareeng.model.Statistics;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,7 +10,7 @@ import java.util.List;
 public class Main {
 
    private static void printUsage() {
-      System.out.println("Usage: java cs.montclair.softwareeng.html.parser.Main [chrome | eclipse] [dir]");
+      System.out.println("Usage: java cs.montclair.softwareeng.html.parser.Main [chrome | netbeans] [dir]");
    }
 
    public static void main(String[] args) {
@@ -21,18 +19,34 @@ public class Main {
          System.exit(1);
       }
 
-      List<Bug> bugs = new ArrayList<Bug>();
-
-      File dir = new File(args[1]);
+      File path = new File(args[1]);
       String type = args[0];
-      IHtmlBugParser parser;
+      IHtmlBugParser parser = getParser(type);
 
+      if(!path.isDirectory()) {
+         try {
+            Bug bug = parser.parse(path);
+            System.out.println("Bug: " + bug);
+         }
+         catch(IOException e) {
+            e.printStackTrace();
+         }
+      }
+   }
+
+   private static IHtmlBugParser getParser(String type) {
       if(type.equals("chrome")) {
-         parser = new ChromiumBugzillaParser();
+         return new ChromiumBugzillaParser();
       }
-      else {
-         parser = new NetbeansBugzillaParser();
+      else if(type.equals("netbeans")) {
+         return new NetbeansBugzillaParser();
       }
+
+      throw new RuntimeException("Parser type not found: " + type);
+   }
+
+   private static List<Bug> parseAll(File dir, IHtmlBugParser parser) {
+      List<Bug> bugs = new ArrayList<Bug>();
 
       for(File file : dir.listFiles()) {
          if(file.getName().equals("search.html")) {
@@ -42,10 +56,8 @@ public class Main {
          try {
             Bug bug = parser.parse(file);
             bugs.add(bug);
-            //System.out.println("status: "+bug.getStatus());
 
             //System.out.println("Bug parsed successfully: " + bug);
-            //break;
          }
          catch(IOException ioe) {
             ioe.printStackTrace();
@@ -53,9 +65,6 @@ public class Main {
       }
 
       System.out.println("# bugs found: " + bugs.size());
-
-      Statistics stats = new Statistics(bugs);
-      System.out.println(stats.getStatusCounts());
+      return bugs;
    }
-
 }
