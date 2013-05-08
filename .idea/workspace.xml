@@ -5,18 +5,23 @@
     <ignored path="parser.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Parser.java" changelist="14ca20e7-14eb-4831-bda2-2078adfaedd1" time="1362701989545" ignored="false" />
-    <file path="/pom.xml" changelist="14ca20e7-14eb-4831-bda2-2078adfaedd1" time="1362699746472" ignored="false" />
-    <file path="/fragment.java" changelist="14ca20e7-14eb-4831-bda2-2078adfaedd1" time="1363549798131" ignored="false" />
+    <file path="/pom.xml" changelist="14ca20e7-14eb-4831-bda2-2078adfaedd1" time="1367538370034" ignored="false" />
+    <file path="/fragment.java" changelist="14ca20e7-14eb-4831-bda2-2078adfaedd1" time="1367881703627" ignored="false" />
     <file path="$PROJECT_DIR$/../sr11_4/src/inetsoft/fl/control/AssetTreeModel.as" changelist="14ca20e7-14eb-4831-bda2-2078adfaedd1" time="1362241993395" ignored="false" />
     <file path="$PROJECT_DIR$/../swum_project/trunk/src/edu/udel/nlpa/swum/actions/BatchSearchHandler.java" changelist="14ca20e7-14eb-4831-bda2-2078adfaedd1" time="1362697640050" ignored="false" />
     <file path="/VCSCommit.java" changelist="14ca20e7-14eb-4831-bda2-2078adfaedd1" time="1362700827181" ignored="false" />
-    <file path="/Bug.java" changelist="14ca20e7-14eb-4831-bda2-2078adfaedd1" time="1362701321413" ignored="false" />
-    <file path="/HtmlBugParser.java" changelist="14ca20e7-14eb-4831-bda2-2078adfaedd1" time="1363646098867" ignored="false" />
-    <file path="/Downloader.java" changelist="14ca20e7-14eb-4831-bda2-2078adfaedd1" time="1363553251282" ignored="false" />
-    <file path="/ChromiumBugzillaParser.java" changelist="14ca20e7-14eb-4831-bda2-2078adfaedd1" time="1363646114866" ignored="false" />
+    <file path="/Bug.java" changelist="14ca20e7-14eb-4831-bda2-2078adfaedd1" time="1367880445416" ignored="false" />
+    <file path="/HtmlBugParser.java" changelist="14ca20e7-14eb-4831-bda2-2078adfaedd1" time="1367880510834" ignored="false" />
+    <file path="/Downloader.java" changelist="14ca20e7-14eb-4831-bda2-2078adfaedd1" time="1367784519833" ignored="false" />
+    <file path="/ChromiumBugzillaParser.java" changelist="14ca20e7-14eb-4831-bda2-2078adfaedd1" time="1364507244492" ignored="false" />
     <file path="/IHTMLBugParser.java" changelist="14ca20e7-14eb-4831-bda2-2078adfaedd1" time="1363646224680" ignored="false" />
-    <file path="/Main.java" changelist="14ca20e7-14eb-4831-bda2-2078adfaedd1" time="1363647052064" ignored="false" />
+    <file path="/Main.java" changelist="14ca20e7-14eb-4831-bda2-2078adfaedd1" time="1367882231101" ignored="false" />
     <file path="/EclipseBugzillaParser.java" changelist="14ca20e7-14eb-4831-bda2-2078adfaedd1" time="1363646709292" ignored="false" />
+    <file path="/Dummy.txt" changelist="14ca20e7-14eb-4831-bda2-2078adfaedd1" time="1368023130056" ignored="false" />
+    <file path="/NetbeansBugzillaParser.java" changelist="14ca20e7-14eb-4831-bda2-2078adfaedd1" time="1367880776878" ignored="false" />
+    <file path="/Counter.java" changelist="14ca20e7-14eb-4831-bda2-2078adfaedd1" time="1367879604521" ignored="false" />
+    <file path="/Statistics.java" changelist="14ca20e7-14eb-4831-bda2-2078adfaedd1" time="1367881156322" ignored="false" />
+    <file path="/.gitignore" changelist="14ca20e7-14eb-4831-bda2-2078adfaedd1" time="1367881914118" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +44,7 @@
         <option name="ENABLED" value="false" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
         <option name="SUSPEND_POLICY" value="SuspendAll" />
         <option name="SUSPEND" value="true" />
         <option name="COUNT_FILTER_ENABLED" value="false" />
@@ -55,6 +61,7 @@
         <option name="ENABLED" value="false" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
         <option name="SUSPEND_POLICY" value="SuspendAll" />
         <option name="SUSPEND" value="true" />
         <option name="COUNT_FILTER_ENABLED" value="false" />
@@ -75,44 +82,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HtmlBugParser.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/HtmlBugParser.java">
+      <file leaf-file-name="NetbeansBugzillaParser.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/NetbeansBugzillaParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="55" selection-start="732" selection-end="732" vertical-scroll-proportion="0.0">
+            <state line="23" column="8" selection-start="484" selection-end="484" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Counter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/model/Counter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="12" selection-start="666" selection-end="666" vertical-scroll-proportion="0.0">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IHtmlBugParser.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/IHtmlBugParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="22" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChromiumBugzillaParser.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/ChromiumBugzillaParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="12" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EclipseBugzillaParser.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/EclipseBugzillaParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="54" selection-start="310" selection-end="310" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -120,7 +105,7 @@
       <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="30" selection-start="726" selection-end="726" vertical-scroll-proportion="0.49418604">
+            <state line="49" column="33" selection-start="1301" selection-end="1301" vertical-scroll-proportion="0.78255814">
               <folding />
             </state>
           </provider>
@@ -129,25 +114,55 @@
       <file leaf-file-name="Bug.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/model/Bug.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0">
+            <state line="38" column="30" selection-start="636" selection-end="636" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VCSCommit.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/model/VCSCommit.java">
+      <file leaf-file-name="List.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.6.0_35/src.zip!/java/util/List.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="54" selection-start="325" selection-end="325" vertical-scroll-proportion="0.0">
+            <state line="213" column="12" selection-start="9474" selection-end="9474" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="XMLUtils.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/XMLUtils.java">
+      <file leaf-file-name="ArrayList.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.6.0_35/src.zip!/java/util/ArrayList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="19" selection-start="1648" selection-end="1648" vertical-scroll-proportion="0.0">
+            <state line="157" column="16" selection-start="6506" selection-end="6506" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Statistics.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/model/Statistics.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="55" selection-start="780" selection-end="780" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#227#244#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Downloader.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/Downloader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="59" selection-start="1259" selection-end="1259" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HtmlBugParser.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/HtmlBugParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="0" selection-start="715" selection-end="715" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -160,22 +175,32 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/XMLUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Parser.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/model/VCSCommit.java" />
         <option value="$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/Parser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/model/Bug.java" />
         <option value="$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/HtmlParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/Downloader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/HtmlBugParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/ChromiumBugzillaParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/IHTMLBugParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/IHtmlBugParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/EclipseBugzillaParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/ChromiumBugzillaParser.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/Downloader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/model/Counter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/model/Bug.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/HtmlBugParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/NetbeansBugzillaParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/model/Statistics.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/Main.java" />
       </list>
     </option>
@@ -214,7 +239,7 @@
     <option name="width" value="1938" />
     <option name="height" value="1050" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -240,8 +265,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -354,6 +377,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -362,9 +387,10 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="preferences.general" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -372,9 +398,9 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -413,11 +439,11 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="cs.montclair.softwareeng.html.parser.Downloader" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="VM_PARAMETERS" value="-Xmx4g" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
@@ -435,11 +461,11 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="cs.montclair.softwareeng.html.parser.Main" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="VM_PARAMETERS" value="-Xmx4g" />
+      <option name="PROGRAM_PARAMETERS" value="netbeans C:\svn\parser\netbeans_bugs" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
@@ -461,19 +487,6 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -502,6 +515,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -558,12 +584,43 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <configuration useDefault="false">C:\Users\gregmallett\AppData\Roaming\Subversion</configuration>
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="14ca20e7-14eb-4831-bda2-2078adfaedd1" name="Default" comment="" />
       <created>1362096446590</created>
       <updated>1362096446590</updated>
     </task>
+    <task id="LOCAL-00001" summary="Overhauled Downloader class.">
+      <created>1367783221265</created>
+      <updated>1367783221265</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Made Downloading bugs multithreaded.">
+      <created>1367784846883</created>
+      <updated>1367784846883</updated>
+    </task>
+    <task id="LOCAL-00003" summary="temp">
+      <created>1368023136321</created>
+      <updated>1368023136321</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -584,14 +641,16 @@
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295711" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17129135" sideWeight="0.6704289" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17449306" sideWeight="0.6704289" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19903949" sideWeight="0.6704289" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295711" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -624,7 +683,7 @@
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
-    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
+    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
     <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
     <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
@@ -634,9 +693,13 @@
     <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
     <option name="LIMIT_HISTORY" value="true" />
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
+    <option name="UPDATE_FILTER_SCOPE_NAME" />
+    <option name="USE_COMMIT_MESSAGE_MARGIN" value="false" />
+    <option name="COMMIT_MESSAGE_MARGIN_SIZE" value="72" />
+    <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="LAST_COMMIT_MESSAGE" value="temp" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -647,8 +710,12 @@
     <option name="ACTIVE_VCS_NAME" />
     <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
+    <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+    <MESSAGE value="Overhauled Downloader class." />
+    <MESSAGE value="Made Downloading bugs multithreaded." />
+    <MESSAGE value="temp" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -658,118 +725,124 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/HtmlBugParser.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.6.0_35/src.zip!/java/util/concurrent/ThreadPoolExecutor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="17" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="1238" column="29" selection-start="49235" selection-end="49235" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#69407#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#15749#15757#0" expanded="false" />
+            <element signature="e#47435#47445#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/model/Bug.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.6.0_35/src.zip!/java/util/concurrent/ExecutorService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/model/VCSCommit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="54" selection-start="325" selection-end="325" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/XMLUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="19" selection-start="1648" selection-end="1648" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../montclair.edu/CS_586/HW_1/src/Mallett_G_a1A.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="202" column="4" selection-start="6150" selection-end="9691" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/XMLUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="19" selection-start="1648" selection-end="1648" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/model/VCSCommit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="54" selection-start="325" selection-end="325" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.7.2/jsoup-1.7.2.jar!/org/jsoup/nodes/Element.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="36" selection-start="1765" selection-end="1765" vertical-scroll-proportion="0.34306568">
+        <state line="164" column="12" selection-start="6380" selection-end="6380" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/Downloader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="31" selection-start="1253" selection-end="1253" vertical-scroll-proportion="0.5218418">
+        <state line="35" column="59" selection-start="1259" selection-end="1259" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.6.0_35/src.zip!/java/io/FilterOutputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="65" selection-start="2571" selection-end="2571" vertical-scroll-proportion="0.019767443">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="27" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0">
+        <state line="7" column="40" selection-start="378" selection-end="378" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/IHtmlBugParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="22" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/model/Bug.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/HtmlBugParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="55" selection-start="732" selection-end="732" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/ChromiumBugzillaParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="12" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/EclipseBugzillaParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="54" selection-start="310" selection-end="310" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/ChromiumBugzillaParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="0" selection-start="643" selection-end="643" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/model/Counter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="12" selection-start="666" selection-end="666" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.6.0_35/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="213" column="12" selection-start="9474" selection-end="9474" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.6.0_35/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="157" column="16" selection-start="6506" selection-end="6506" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/model/Bug.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="30" selection-start="636" selection-end="636" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/HtmlBugParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="715" selection-end="715" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/NetbeansBugzillaParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="8" selection-start="484" selection-end="484" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/model/Statistics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="55" selection-start="780" selection-end="780" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#227#244#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="8" selection-start="18" selection-end="18" vertical-scroll-proportion="0.019767443">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="30" selection-start="726" selection-end="726" vertical-scroll-proportion="0.49418604">
+        <state line="49" column="33" selection-start="1301" selection-end="1301" vertical-scroll-proportion="0.78255814">
           <folding />
         </state>
       </provider>
