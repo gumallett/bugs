@@ -49,7 +49,7 @@ public class NetbeansBugzillaParser extends HtmlBugParser {
    }
 
    @Override
-   public Bug parse(File file) throws IOException {
+   public Bug parse(File file) throws Exception {
       Bug bug = super.parse(file);
       bug.setType(BugType.NETBEANS);
 

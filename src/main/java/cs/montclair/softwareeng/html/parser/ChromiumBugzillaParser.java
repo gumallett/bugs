@@ -31,7 +31,7 @@ public class ChromiumBugzillaParser extends HtmlBugParser {
    private static final SimpleDateFormat bugzillaSdf = new SimpleDateFormat("MMM dd, yyyy");
 
    @Override
-   public Bug parse(File file) throws IOException {
+   public Bug parse(File file) throws Exception {
       Bug bug = super.parse(file);
       bug.setType(BugType.CHROME);
       bug.setId(bug.getId() + 200000);
@@ -119,16 +119,26 @@ public class ChromiumBugzillaParser extends HtmlBugParser {
       String status = doc.select("#meta-float td").get(0).text();
       status = status.toUpperCase();
 
+      if(status.equalsIgnoreCase("invalid")) {
+         return "CLOSED INVALID";
+      }
+      else if(status.equalsIgnoreCase("wontfix")) {
+         return "CLOSED WONTFIX";
+      }
+      else if(status.equalsIgnoreCase("duplicate")) {
+         return "CLOSED DUPLICATE";
+      }
+      else if(status.equalsIgnoreCase("fixed")) {
+         return "RESOLVED FIXED";
+      }
+      else if(status.equalsIgnoreCase("verified")) {
+         return "VERIFIED FIXED";
+      }
+
       String closed = getMetaData(doc, "Closed:");
 
       if(closed != null) {
-         String resolution = status;
-
-         if(resolution.equalsIgnoreCase("fixed")) {
-            return "RESOLVED FIXED";
-         }
-
-         return "CLOSED " + resolution.toUpperCase();
+         return "CLOSED " + status.toUpperCase();
       }
 
       return status;
@@ -174,6 +184,7 @@ public class ChromiumBugzillaParser extends HtmlBugParser {
                   changedFile = new ChangedFile();
                   changedFile.setFileName(filename);
                   changedFile.setExtension(FilenameUtils.getExtension(filename));
+                  changedFileDao.save(changedFile);
                }
 
                changedFiles.add(changedFile);
@@ -195,7 +206,7 @@ public class ChromiumBugzillaParser extends HtmlBugParser {
          commit.setCommitMessage(getMessage(scanner, lineCount));
          commit.setFiles(changedFiles);
       }
-      catch(IOException ioe) {
+      catch(Exception ioe) {
          LOG.warn("Could not get revision info for: {}", revision);
          LOG.warn(ioe.getMessage(), ioe);
       }

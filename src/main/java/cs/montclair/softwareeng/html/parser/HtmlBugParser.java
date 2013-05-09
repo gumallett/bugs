@@ -17,7 +17,7 @@ public abstract class HtmlBugParser implements IHtmlBugParser {
 
    private static final Logger LOG = LoggerFactory.getLogger(HtmlBugParser.class);
 
-   public Bug parse(File file) throws IOException {
+   public Bug parse(File file) throws Exception {
       LOG.debug("Parsing bug file: " + file);
       Document doc = Jsoup.parse(file, "utf-8");
 

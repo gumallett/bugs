@@ -9,5 +9,9 @@ public enum BugStatus {
    CLOSED,
    NEW,
    STARTED,
-   REOPENED
+   REOPENED,
+   AVAILABLE,
+   UNTRIAGED,
+   UPSTREAM,
+   ASSIGNEDw
 }

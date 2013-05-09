@@ -30,7 +30,7 @@ public class Main {
             System.out.println("Bug: " + bug);
             System.out.println("Description: " + bug.getDescription());
          }
-         catch(IOException e) {
+         catch(Exception e) {
             e.printStackTrace();
          }
       }
@@ -71,8 +71,8 @@ public class Main {
 
             //System.out.println("Bug parsed successfully: " + bug);
          }
-         catch(IOException ioe) {
-            ioe.printStackTrace();
+         catch(Exception e) {
+            e.printStackTrace();
          }
 
          progress++;

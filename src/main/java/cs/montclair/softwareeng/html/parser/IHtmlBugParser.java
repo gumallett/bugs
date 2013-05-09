@@ -7,5 +7,5 @@ import java.io.IOException;
 
 public interface IHtmlBugParser {
 
-   public Bug parse(File file) throws IOException;
+   public Bug parse(File file) throws Exception;
 }
