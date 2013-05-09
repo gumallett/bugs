@@ -13,5 +13,5 @@ public enum BugStatus {
    AVAILABLE,
    UNTRIAGED,
    UPSTREAM,
-   ASSIGNEDw
+   ASSIGNED
 }
