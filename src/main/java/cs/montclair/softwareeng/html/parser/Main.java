@@ -29,8 +29,6 @@ public class Main {
             Bug bug = parser.parse(path);
             System.out.println("Bug: " + bug);
             System.out.println("Description: " + bug.getDescription());
-            BugDAO dao = new BugDAO();
-            dao.save(bug);
          }
          catch(IOException e) {
             e.printStackTrace();
@@ -38,8 +36,6 @@ public class Main {
       }
       else {
          List<Bug> bugs = parseAll(path, parser);
-         BugDAO dao = new BugDAO();
-         dao.saveAll(bugs);
       }
    }
 
@@ -66,6 +62,8 @@ public class Main {
          try {
             Bug bug = parser.parse(file);
             bugs.add(bug);
+            BugDAO dao = new BugDAO();
+            dao.save(bug);
 
             if(progress % 100 == 0) {
                System.out.println(progress + " bugs parsed.");

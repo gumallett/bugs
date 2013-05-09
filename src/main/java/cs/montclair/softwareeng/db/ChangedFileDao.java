@@ -12,11 +12,20 @@ public class ChangedFileDao extends GenericDao<ChangedFile> {
    public ChangedFile findByFileName(String filename) {
       Session session = open();
       session.beginTransaction();
+      ChangedFile changedFile;
 
-      ChangedFile changedFile = (ChangedFile)
-         session.createQuery("from ChangedFile as file where file.fileName=:name").setString("name", filename).uniqueResult();
+      try {
+         changedFile = (ChangedFile)
+            session.createQuery("from ChangedFile as file where file.fileName=:name").setString("name", filename).uniqueResult();
+      }
+      catch(Exception e) {
+         session.getTransaction().rollback();
+         session.close();
+         return null;
+      }
 
-      session.getTransaction().commit();
+      session.close();
+
       return changedFile;
    }
 }

@@ -6,6 +6,8 @@ import org.apache.commons.io.FilenameUtils;
 import org.jsoup.Jsoup;
 
 import org.jsoup.nodes.Document;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,7 +15,10 @@ import java.util.Date;
 
 public abstract class HtmlBugParser implements IHtmlBugParser {
 
+   private static final Logger LOG = LoggerFactory.getLogger(HtmlBugParser.class);
+
    public Bug parse(File file) throws IOException {
+      LOG.debug("Parsing bug file: " + file);
       Document doc = Jsoup.parse(file, "utf-8");
 
       Bug bug = new Bug();

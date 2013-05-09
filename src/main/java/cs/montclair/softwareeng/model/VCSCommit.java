@@ -80,6 +80,6 @@ public class VCSCommit {
    }
 
    public String toString() {
-      return String.format("VCSCommit[%d, %s, %s, %s, %s]", id, revision, commitMessage, user, commitDate);
+      return String.format("VCSCommit[%d, %s, %s, %s, %s, %s]", id, revision, commitMessage, user, commitDate, files);
    }
 }

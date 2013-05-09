@@ -1,6 +1,7 @@
 package cs.montclair.softwareeng.html.parser;
 
 import cs.montclair.softwareeng.db.ChangedFileDao;
+import cs.montclair.softwareeng.db.VCSCommitDao;
 import cs.montclair.softwareeng.model.Bug;
 import cs.montclair.softwareeng.model.BugType;
 import cs.montclair.softwareeng.model.ChangedFile;
@@ -9,6 +10,8 @@ import org.apache.commons.io.FilenameUtils;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
@@ -24,6 +27,8 @@ import java.util.regex.Pattern;
 
 public class NetbeansBugzillaParser extends HtmlBugParser {
 
+   private static final Logger LOG = LoggerFactory.getLogger(NetbeansBugzillaParser.class);
+
    // Bugzilla date
    private final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm z");
 
@@ -31,12 +36,13 @@ public class NetbeansBugzillaParser extends HtmlBugParser {
    private final SimpleDateFormat sdf2 = new SimpleDateFormat("EEE MMM dd HH:mm:ss yyyy Z");
 
    // SHA-1 parser for revision hash
-   private final Pattern hexPattern = Pattern.compile("\\s*([0-9]|[a-f]){12}\\s*$");
+   private final Pattern hexPattern = Pattern.compile("\\s*([0-9]|[a-f]){12}/?\\s*$");
 
    // Patterns for parsing mercurial logs
    private final Pattern filesPattern = Pattern.compile("^files:", Pattern.CASE_INSENSITIVE | Pattern.MULTILINE);
    private final Pattern datePattern = Pattern.compile("^date:", Pattern.CASE_INSENSITIVE | Pattern.MULTILINE);
    private final Pattern userPattern = Pattern.compile("^user:", Pattern.CASE_INSENSITIVE | Pattern.MULTILINE);
+   private final Pattern descPattern = Pattern.compile("^description:", Pattern.CASE_INSENSITIVE | Pattern.MULTILINE);
 
    public NetbeansBugzillaParser() {
 
@@ -132,49 +138,14 @@ public class NetbeansBugzillaParser extends HtmlBugParser {
          String text = elem.text();
          Matcher matcher = hexPattern.matcher(text);
 
-         if(matcher.matches()) {
-            VCSCommit commit = new VCSCommit();
+         if(matcher.find()) {
             String revision = matcher.group();
-            commit.setRevision(revision);
+            VCSCommitDao commitDao = new VCSCommitDao();
 
-            Process hg = null;
+            VCSCommit commit = commitDao.findByRevision(revision);
 
-            try {
-               hg = getMercurialLog(revision);
-               InputStream is = hg.getInputStream();
-
-               Scanner scanner = new Scanner(is);
-
-               scanner.findWithinHorizon(userPattern, 0);
-               String user = scanner.nextLine().trim();
-               scanner.findWithinHorizon(datePattern, 0);
-               String date = scanner.nextLine().trim();
-               scanner.findWithinHorizon(filesPattern, 0);
-               List<ChangedFile> files = getChangedFiles(scanner);
-               String message = consume(scanner);
-
-               commit.setUser(user);
-               commit.setFiles(files);
-               commit.setCommitMessage(message);
-
-               try {
-                  commit.setCommitDate(sdf2.parse(date));
-               }
-               catch(ParseException e) {
-                  e.printStackTrace();
-               }
-
-               //System.out.println(commit);
-
-               hg.destroy();
-            }
-            catch(Exception e) {
-               new Exception("Error getting revision log for rev #: "+revision).printStackTrace();
-            }
-            finally {
-               if(hg != null) {
-                  hg.destroy();
-               }
+            if(commit == null) {
+               commit = getCommit(revision);
             }
 
             return commit;
@@ -197,6 +168,54 @@ public class NetbeansBugzillaParser extends HtmlBugParser {
       return getTableRow(element.parent());
    }
 
+   private VCSCommit getCommit(String revision) {
+      VCSCommit commit = new VCSCommit();
+      commit.setRevision(revision);
+
+      Process hg = null;
+
+      try {
+         hg = getMercurialLog(revision);
+         InputStream is = hg.getInputStream();
+
+         Scanner scanner = new Scanner(is);
+
+         scanner.findWithinHorizon(userPattern, 0);
+         String user = scanner.nextLine().trim();
+         scanner.findWithinHorizon(datePattern, 0);
+         String date = scanner.nextLine().trim();
+         scanner.findWithinHorizon(filesPattern, 0);
+         List<ChangedFile> files = getChangedFiles(scanner);
+         scanner.findWithinHorizon(descPattern, 0);
+         String message = consume(scanner);
+
+         commit.setUser(user);
+         commit.setFiles(files);
+         commit.setCommitMessage(message);
+
+         try {
+            commit.setCommitDate(sdf2.parse(date));
+         }
+         catch(ParseException e) {
+            e.printStackTrace();
+         }
+
+         //System.out.println(commit);
+
+         hg.destroy();
+      }
+      catch(Exception e) {
+         LOG.warn("Error getting revision log for rev #: " + revision, e);
+      }
+      finally {
+         if(hg != null) {
+            hg.destroy();
+         }
+      }
+
+      return commit;
+   }
+
    private static Process getMercurialLog(String revision) throws IOException {
       ProcessBuilder processBuilder = new ProcessBuilder("\"C:\\Program Files\\TortoiseHg\\hg.exe\"", "log", "-v", "-r", revision);
       processBuilder.redirectErrorStream(true);
@@ -208,22 +227,19 @@ public class NetbeansBugzillaParser extends HtmlBugParser {
    private static List<ChangedFile> getChangedFiles(Scanner in) {
       List<ChangedFile> files = new ArrayList<ChangedFile>();
 
-      while(in.hasNext()) {
-         String file = in.next();
+      String file = in.nextLine().trim();
+      String[] filesList = file.split(" ");
 
-         if(file.startsWith("description")) {
-            break;
-         }
-
+      for(String f : filesList) {
          ChangedFile changedFile;
          ChangedFileDao dao = new ChangedFileDao();
 
-         changedFile = dao.findByFileName(file);
+         changedFile = dao.findByFileName(f);
 
          if(changedFile == null) {
             changedFile = new ChangedFile();
-            changedFile.setFileName(file);
-            changedFile.setExtension(FilenameUtils.getExtension(file));
+            changedFile.setFileName(f);
+            changedFile.setExtension(FilenameUtils.getExtension(f));
             dao.save(changedFile);
          }
 
