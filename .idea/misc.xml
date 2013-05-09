@@ -11,9 +11,13 @@
       </list>
     </option>
   </component>
+  <component name="ProjectResources">
+    <default-html-doctype>http://www.w3.org/1999/xhtml</default-html-doctype>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="1.6" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
-  <component name="RegexUtilComponent" text="1900-01-01 2007/08/13 1900.01.01 1900 01 01 1900-01.01 1900 13 01 1900 02 31" flags="0" regex="(19|20)\d\d([- /.])(0[1-9]|1[012])\2(0[1-9]|[12][0-9]|3[01])" mode="0" />
+  <component name="RegexUtilComponent" text="Integrated into 'main-golden', will be available in build *200809020201* on&#10;http://bits.netbeans.org/dev/nightly/ (upload may still be in progress)&#10;Changeset: http://hg.netbeans.org/main/rev/65bb58dbc2d6&#10;User: Lukas Jungmann &lt;jungi@netbeans.org&gt;&#10;Log: IZ #145785: nbms&amp;javadoc build failing" flags="10" regex="\s*([0-9]|[a-f]){12}\s*$" mode="0" />
+  <component name="WebServicesPlugin" addRequiredLibraries="true" />
 </project>
 
