@@ -55,10 +55,10 @@ public class ChromiumBugzillaParser extends HtmlBugParser {
       if(priority == null) {
          priority = getMetaData(doc, "Size-");
 
-         if(priority.equalsIgnoreCase("high")) {
+         if(priority != null && priority.equalsIgnoreCase("high")) {
             priority = "1";
          }
-         else if(priority.equalsIgnoreCase("medium")) {
+         else if(priority != null && priority.equalsIgnoreCase("medium")) {
             priority = "2";
          }
          else {
@@ -98,7 +98,7 @@ public class ChromiumBugzillaParser extends HtmlBugParser {
       Elements elems = doc.select("a[href*=chromium/source");
 
       if(elems.size() > 0) {
-         String revision = elems.get(0).text().substring(1);
+         String revision = elems.last().text().substring(1);
          VCSCommitDao dao = new VCSCommitDao();
 
          VCSCommit commit = dao.findByRevision(revision);
