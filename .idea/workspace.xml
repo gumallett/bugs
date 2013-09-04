@@ -17,7 +17,7 @@
     <file path="/IHTMLBugParser.java" changelist="14ca20e7-14eb-4831-bda2-2078adfaedd1" time="1363646224680" ignored="false" />
     <file path="/Main.java" changelist="14ca20e7-14eb-4831-bda2-2078adfaedd1" time="1367882231101" ignored="false" />
     <file path="/EclipseBugzillaParser.java" changelist="14ca20e7-14eb-4831-bda2-2078adfaedd1" time="1363646709292" ignored="false" />
-    <file path="/Dummy.txt" changelist="14ca20e7-14eb-4831-bda2-2078adfaedd1" time="1368023130056" ignored="false" />
+    <file path="/Dummy.txt" changelist="14ca20e7-14eb-4831-bda2-2078adfaedd1" time="1378336216286" ignored="false" />
     <file path="/NetbeansBugzillaParser.java" changelist="14ca20e7-14eb-4831-bda2-2078adfaedd1" time="1367880776878" ignored="false" />
     <file path="/Counter.java" changelist="14ca20e7-14eb-4831-bda2-2078adfaedd1" time="1367879604521" ignored="false" />
     <file path="/Statistics.java" changelist="14ca20e7-14eb-4831-bda2-2078adfaedd1" time="1367881156322" ignored="false" />
@@ -36,7 +36,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -73,6 +72,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -86,9 +86,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/NetbeansBugzillaParser.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="23" column="8" selection-start="484" selection-end="484" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -102,10 +100,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="33" selection-start="1301" selection-end="1301" vertical-scroll-proportion="0.78255814">
+            <state line="49" column="33" selection-start="1301" selection-end="1301" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -138,14 +136,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Statistics.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Statistics.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/model/Statistics.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="55" selection-start="780" selection-end="780" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#227#244#0" expanded="true" />
-              </folding>
+            <state line="31" column="55" selection-start="780" selection-end="780" vertical-scroll-proportion="0.5534884">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -265,6 +260,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -294,6 +291,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -377,8 +378,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -398,9 +397,9 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -489,6 +488,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -515,19 +527,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -624,13 +623,12 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295711" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -640,7 +638,6 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295711" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -654,6 +651,8 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295711" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -727,21 +726,12 @@
   <component name="editorHistoryManager">
     <entry file="jar://C:/Program Files/Java/jdk1.6.0_35/src.zip!/java/util/concurrent/ThreadPoolExecutor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1238" column="29" selection-start="49235" selection-end="49235" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#69407#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#15749#15757#0" expanded="false" />
-            <element signature="e#47435#47445#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="1238" column="29" selection-start="49235" selection-end="49235" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.6.0_35/src.zip!/java/util/concurrent/ExecutorService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="164" column="12" selection-start="6380" selection-end="6380" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="164" column="12" selection-start="6380" selection-end="6380" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/Downloader.java">
@@ -753,9 +743,7 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.6.0_35/src.zip!/java/io/FilterOutputStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="65" selection-start="2571" selection-end="2571" vertical-scroll-proportion="0.019767443">
-          <folding />
-        </state>
+        <state line="71" column="65" selection-start="2571" selection-end="2571" vertical-scroll-proportion="0.019767443" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -779,13 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/model/Counter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="12" selection-start="666" selection-end="666" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.6.0_35/src.zip!/java/util/List.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="213" column="12" selection-start="9474" selection-end="9474" vertical-scroll-proportion="0.0">
@@ -800,13 +781,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/model/Bug.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="30" selection-start="636" selection-end="636" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/HtmlBugParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="0" selection-start="715" selection-end="715" vertical-scroll-proportion="0.0">
@@ -817,32 +791,39 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/NetbeansBugzillaParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="8" selection-start="484" selection-end="484" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/model/Statistics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="55" selection-start="780" selection-end="780" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#227#244#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="8" selection-start="18" selection-end="18" vertical-scroll-proportion="0.019767443">
-          <folding />
-        </state>
+        <state line="1" column="8" selection-start="18" selection-end="18" vertical-scroll-proportion="0.019767443" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/html/parser/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="33" selection-start="1301" selection-end="1301" vertical-scroll-proportion="0.78255814">
+        <state line="49" column="33" selection-start="1301" selection-end="1301" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/model/Bug.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="30" selection-start="636" selection-end="636" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/model/Counter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="12" selection-start="666" selection-end="666" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cs/montclair/softwareeng/model/Statistics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="55" selection-start="780" selection-end="780" vertical-scroll-proportion="0.5534884">
           <folding />
         </state>
       </provider>
