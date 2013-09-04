@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- For assistance related to logback-translator or configuration  -->
+<!-- files in general, please contact the logback user mailing list -->
+<!-- at http://www.qos.ch/mailman/listinfo/logback-user             -->
+<!--                                                                -->
+<!-- For professional support please see                            -->
+<!--    http://www.qos.ch/shop/products/professionalSupport         -->
+<!--                                                                -->
+<configuration>
+    <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <append>false</append>
+        <file>parser.log</file>
+        <encoder>
+            <pattern>%d{MM/dd/yyyy HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %m%n</pattern>
+            <immediateFlush>false</immediateFlush>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+            <fileNamePattern>parser.%i.log</fileNamePattern>
+            <minIndex>1</minIndex>
+            <maxIndex>3</maxIndex>
+        </rollingPolicy>
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <maxFileSize>1MB</maxFileSize>
+        </triggeringPolicy>
+
+    </appender>
+
+    <logger name="org.hibernate.SQL" level="WARN">
+    </logger>
+
+    <logger name="cs.montclair.softwareeng.html.parser" level="DEBUG">
+    </logger>
+
+    <logger name="cs.montclair.softwareeng.db" level="DEBUG">
+    </logger>
+
+    <root level="WARN">
+        <appender-ref ref="file"/>
+    </root>
+</configuration>

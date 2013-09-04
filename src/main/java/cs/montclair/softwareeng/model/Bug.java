@@ -1,11 +1,40 @@
 package cs.montclair.softwareeng.model;
 
+import org.hibernate.annotations.Type;
+
+import javax.persistence.*;
+import java.util.Date;
+
+@Entity
+@Table(name="BUGS")
 public class Bug {
 
+   @Id
    private int id;
-   private String name;
+
+   private String summary;
+   private String issueType;
+
+   @Lob
+   @Type(type = "org.hibernate.type.TextType")
    private String description;
-   private String status;
+
+   @Temporal(TemporalType.TIMESTAMP)
+   private Date createdDate;
+
+   @Enumerated(EnumType.STRING)
+   private BugType type;
+
+   @Enumerated(EnumType.STRING)
+   private BugStatus status;
+
+   @Enumerated(EnumType.STRING)
+   private BugResolution resolution;
+
+   @Enumerated(EnumType.STRING)
+   private BugPriority priority;
+
+   @OneToOne(cascade = {CascadeType.ALL})
    private VCSCommit commit;
 
    public Bug() {
@@ -20,12 +49,20 @@ public class Bug {
       this.id = id;
    }
 
-   public String getName() {
-      return name;
+   public BugType getType() {
+      return type;
    }
 
-   public void setName(String name) {
-      this.name = name;
+   public void setType(BugType type) {
+      this.type = type;
+   }
+
+   public String getSummary() {
+      return summary;
+   }
+
+   public void setSummary(String summary) {
+      this.summary = summary;
    }
 
    public String getDescription() {
@@ -36,12 +73,44 @@ public class Bug {
       this.description = description;
    }
 
-   public String getStatus() {
+   public BugStatus getStatus() {
       return status;
    }
 
-   public void setStatus(String status) {
+   public void setStatus(BugStatus status) {
       this.status = status;
+   }
+
+   public BugResolution getResolution() {
+      return resolution;
+   }
+
+   public void setResolution(BugResolution resolution) {
+      this.resolution = resolution;
+   }
+
+   public String getIssueType() {
+      return issueType;
+   }
+
+   public void setIssueType(String issueType) {
+      this.issueType = issueType;
+   }
+
+   public BugPriority getPriority() {
+      return priority;
+   }
+
+   public void setPriority(BugPriority priority) {
+      this.priority = priority;
+   }
+
+   public Date getCreatedDate() {
+      return createdDate;
+   }
+
+   public void setCreatedDate(Date createdDate) {
+      this.createdDate = createdDate;
    }
 
    public VCSCommit getCommit() {
@@ -54,6 +123,7 @@ public class Bug {
 
    @Override
    public String toString() {
-      return String.format("Bug[%d, %s, %s, %s]", id, name, description, commit);
+      return String.format("Bug[%d, %s, %s, %s, %s, %s, %s, %s]",
+         id, summary, commit, status, resolution, priority, issueType, createdDate.toString());
    }
 }
